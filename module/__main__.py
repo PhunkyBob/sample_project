@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-import person
+from .person import Person
+from .person.address import Address
+
 
 def create_concatenated_string():
     ### Bad
@@ -22,11 +24,10 @@ def create_concatenated_string():
     return "".join(nums)
 
 
-if __name__ == '__main__':
-    person_1 = person.Person("John", 30, person.Address("street", "city", "zipcode"))
+def main() -> None:
+    person_1 = Person("John", 30, Address("street", "city", "zipcode"))
     print(person_1)
 
 
-
-    
-
+if __name__ == "__main__":
+    main()
